@@ -5,7 +5,7 @@ type props = {
 };
 export default function Categories({ categories, selectedCategory, setSelectedCategory }: props) {
   return (
-    <div className="flex md:flex-row gap-1 overflow-x-auto md:overflow-visible">
+    <div className="flex flex-wrap md:flex-row gap-1 overflow-x-auto md:overflow-visible">
       {categories.map((cat) => (
         <button
           key={cat}
