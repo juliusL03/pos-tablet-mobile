@@ -18,7 +18,7 @@ export default function Products({ products, selectedCategory, addToCart }: prop
           .map((product) => (
             <button
               key={product.id}
-              className="p-4 border-gray-500 rounded-xl text-center shadow bg-white hover:bg-blue-50"
+              className="p-3 border-gray-500 rounded-xl text-center shadow bg-white hover:bg-blue-50"
               onClick={() => addToCart(product)}
             >
               <h3 className="md:text-md md:font-semibold lg:text-lg lg:font-bold">

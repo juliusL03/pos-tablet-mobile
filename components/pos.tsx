@@ -8,6 +8,8 @@ import Summary from "./Summary";
 import Container from "./Container";
 import BoxRounded from "./BoxRounded";
 import { categories, products } from "@/test/constant";
+import UserBar from "./UserBar";
+import TradeMark from "./TradeMark";
 
 export default function POS() {
   const [cart, setCart] = useState<{ id: number; name: string; price: number; qty: number }[]>([]);
@@ -36,22 +38,26 @@ export default function POS() {
   return (
     <Container>
       <BoxRounded>
-        <BarcodeInput
-          addToCart={addToCart}
-          barcode={barcode}
-          setBarcode={setBarcode}
-          setSelectedCategory={setSelectedCategory}
-        />
-        <Categories
-          categories={categories}
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-        />
-        <Products
-          products={filteredProducts}
-          selectedCategory={selectedCategory}
-          addToCart={addToCart}
-        />
+        <div className="flex flex-col flex-grow gap-4 overflow-y-auto">
+          <BarcodeInput
+            addToCart={addToCart}
+            barcode={barcode}
+            setBarcode={setBarcode}
+            setSelectedCategory={setSelectedCategory}
+          />
+          <Categories
+            categories={categories}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+          <Products
+            products={filteredProducts}
+            selectedCategory={selectedCategory}
+            addToCart={addToCart}
+          />
+        </div>
+        <UserBar />
+        <TradeMark />
       </BoxRounded>
       <Summary
         cart={cart}
