@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { products } from "@/test/constant";
 import { Search, ScanBarcode } from "lucide-react";
-import { products } from "./pos";
 type Props = {
   addToCart: (product: (typeof products)[0]) => void;
   barcode: string;

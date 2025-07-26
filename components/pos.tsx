@@ -7,17 +7,7 @@ import Products from "./Products";
 import Summary from "./Summary";
 import Container from "./Container";
 import BoxRounded from "./BoxRounded";
-
-export const products = [
-  { id: 1, name: "Bananas", price: 1.0, category: "Fruits & Vegetables" },
-  { id: 2, name: "Apples", price: 0.5, category: "Fruits & Vegetables" },
-  { id: 3, name: "Lettuce", price: 1.5, category: "Fruits & Vegetables" },
-  { id: 4, name: "Croissant", price: 1.8, category: "Bakery" },
-  { id: 5, name: "Milk", price: 2.0, category: "Dairy" },
-  { id: 6, name: "Cheese", price: 4.0, category: "Dairy" },
-];
-
-const categories = ["All", "Fruits & Vegetables", "Bakery", "Dairy"];
+import { categories, products } from "@/test/constant";
 
 export default function POS() {
   const [cart, setCart] = useState<{ id: number; name: string; price: number; qty: number }[]>([]);
